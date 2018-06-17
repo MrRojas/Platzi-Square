@@ -21,4 +21,10 @@ export class AppComponent {
   	}, 3000)
   }
 
+
+  hacerAlgo(){
+
+  	alert('Que lastima me dolio, me despido de ti y me voy...')
+  }
+
 }

@@ -7,24 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  title = 'Platzi Square';
+  title = 'PlatziSquare'; 
 
-  num1 = 5 
-  num2 = 3
-  // variable de control para el boton
-  listo = false
+  // array que acepta todo tipo de objecto 
+  lugares:any = [
+    {active: true , nombre : 'Floreria la Gardenia'},
+    {active: false , nombre : 'Donas la Pasadita'},
+    {active: true , nombre : 'Veterinaria UNEFA'}
+  ];
 
-  constructor(){
-
-  	setTimeout( ()=>{
-  		this.listo = true 
-  	}, 3000)
-  }
-
-
-  hacerAlgo(){
-
-  	alert('Que lastima me dolio, me despido de ti y me voy...')
-  }
+  lat: number = 9.3278518;
+  lng: number = -69.1223535;
 
 }

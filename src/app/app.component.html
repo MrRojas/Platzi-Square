@@ -1,25 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
 
-  <h2>
-    {{ num1 + num2 }}
+<h1>Armando </h1>
+<ul>
 
-  </h2>
-
-<button [disabled]="!listo"  (click)="hacerAlgo()"  > Click Aqui </button>
-
-
-<hr>
-
-<input type="text"  placeholder="Ingresa tu Nombre" [(ngModel)]="nombre" >
-<br>
-
-<h1>
-	¡Hola! {{nombre}}
-</h1>
+	<ng-container *ngFor="let lugar of lugares">
+	<li *ngIf="lugar.active"  >
+		{{lugar.nombre}}
+	</li>
+	</ng-container>
+</ul>
 
 
-</div>
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>

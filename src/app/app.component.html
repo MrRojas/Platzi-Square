@@ -1,6 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 <h1>Armando </h1>
+
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+
+<hr>
+
 <ul>
 
 	<ng-container *ngFor="let lugar of lugares">
@@ -10,7 +17,21 @@
 	</ng-container>
 </ul>
 
+<hr>
 
-<agm-map [latitude]="lat" [longitude]="lng">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-</agm-map>
+<ul>
+
+	<ng-container *ngFor="let lugar of lugares" [ngSwitch]="lugar.cercania">
+	
+	<li  [resaltar]="lugar.plan"  >
+		<a contar-clicks >
+		{{lugar.nombre}}
+		
+		<span *ngSwitchCase="1" [ngStyle]=" {color: 'green'}  "> Muy Cerca   </span>
+		<span *ngSwitchCase="2" [ngStyle]=" {color: 'black'}  "> Cerca  </span>
+		<span *ngSwitchCase="3" [ngStyle]=" {color : 'red'}  "> Lejos   </span>
+</a>
+	</li>
+	
+	</ng-container>
+</ul>

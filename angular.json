@@ -22,10 +22,23 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+           "styles": [
+
+         
+
+              "node_modules/materialize-css/dist/css/materialize.css" // se anade esto
+
+              ],
+
+              "scripts": [
+
+              "node_modules/jquery/dist/jquery.js", // esto se anade
+
+              "node_modules/hammerjs/hammer.js",// esto se anade
+
+              "node_modules/materialize-css/dist/js/materialize.js"// esto se anade
+
+              ],
           },
           "configurations": {
             "production": {

@@ -13,9 +13,15 @@ export class LugaresService{
         { id: 6 , plan : 'gratis' , cercania: 2, distancia: 120,  active: true ,  nombre : 'Planta Industrial UNEFA'}
       ];
 
-      get(){
+      constructor(){
 
-        return this.lugares;
+      }
+
+      public get(){ return this.lugares; }
+
+      public buscarPorId( id ){
+
+        return this.lugares.filter( (e) => e.id == id || null )[0]
       }
   
       

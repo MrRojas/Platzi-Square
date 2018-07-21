@@ -18,11 +18,14 @@ import { AgmCoreModule } from '@agm/core';
 import { ResaltarDirectiva } from './directives/resaltar.directive';
 import { ContarClicksDirective } from './directives/contar-clicks.directive';
 import { Routes , RouterModule } from '@angular/router';
+import { ContactoComponent } from './contacto/contacto.component';
+import { LugaresService } from 'Clases/clase__19/lugares.service';
 
 const appRoutes : Routes = [ 
   { path : '' , component : LugaresComponent },
   { path : 'lugares' , component : LugaresComponent },
   { path : 'detalle/:id' , component : DetalleComponent },
+  { path : 'contacto' , component : ContactoComponent },
 
 ];
 @NgModule({
@@ -30,7 +33,7 @@ const appRoutes : Routes = [
     AppComponent,
     DetalleComponent,
    LugaresComponent,
-
+   ContactoComponent,
     ResaltarDirectiva,
     ContarClicksDirective
   ],
@@ -43,7 +46,7 @@ const appRoutes : Routes = [
      RouterModule.forRoot(appRoutes)
    
   ],
-  providers: [],
+  providers: [LugaresService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
